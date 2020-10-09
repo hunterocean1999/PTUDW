@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #form1{
+            background-color:pink ;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+        input{
+            text-align: right;
+            outline: none;
+        }
+        h1{
+            color: #cc6600;
+            background-color: #FFEDCA;
+        }
+    </style>
+<body>
+
+
+
+
+<form id="form1">
+    <h1>The input form attribute</h1>
+  <label>Chiều Dài:</label>
+  <input type="number" id="height" ><br><br>
+  <label >Chiều Rộng:</label>
+  <input type="number" id="width"><br><br>
+  <label >Diện tích:</label>
+  <input type="number" id="S" name="fname"><br><br>
+  <!-- <p id="dientich"></p> -->
+  <input type="button" value="Submit" onclick="changeText()">
+</form>
+
+<script>
+    function changeText() {
+        var width = document.getElementById('width');
+        var height = document.getElementById('height');
+        var s = width.value * height.value;
+       
+        document.getElementById("S").value = s;
+    }
+  
+    </script>
+    
+</body>
+</html>
