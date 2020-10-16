@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #form1{
+            background-color:pink ;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+        input{
+            text-align: right;
+            outline: none;
+        }
+        h1{
+            color: #cc6600;
+            background-color: #FFEDCA;
+            text-transform: uppercase;
+        }
+    </style>
+<body>
+
+
+
+
+<form id="form1">
+<h1>diện tích và chu vi hình tròn</h1>
+  <label>Tên chủ hộ:</label>
+  <input type="text" id="R" ><br><br>
+  <label >Chỉ số cũ:</label>
+  <input type="number" id="old"><br><br>
+  <label >Chỉ số mới:</label>
+  <input type="number" id="new" name="fname"><br><br>
+  <label >Đơn giá:</label>
+  <input type="number" id="price"><br><br>
+  <label >Số tiền thanh toán:</label>
+  <input type="number" id="result" style="background-color: orangered;"><br><br>
+  
+  <!-- <p id="dientich"></p> -->
+  <input type="button" value="Submit" onclick="changeText()">
+  <p id="result"></p>
+</form>
+
+<script>
+    var singlePrice = document.getElementById('price');
+    singlePrice.value = 2000; 
+    function changeText() {
+        var old = document.getElementById('old');
+        var newPrice = document.getElementById('new');
+        var result = document.getElementById('result');
+
+        result.value = (newPrice.value - old.value) * 2000;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #form1{
+            background-color:pink ;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+        input{
+            text-align: right;
+            outline: none;
+        }
+        h1{
+            color: #cc6600;
+            background-color: #FFEDCA;
+            text-transform: uppercase;
+        }
+    </style>
+<body>
+
+
+
+
+<form id="form1">
+    <h1>Định màu chữ màu nền</h1>
+  <label>Nội dung:</label>
+  <input type="text" id="content" ><br><br>
+  <label >Màu nền:</label>
+  <input type="text" id="background"><br><br>
+  <label >Màu chữ:</label>
+  <input type="text" id="color" name="fname"><br><br>
+  <!-- <p id="dientich"></p> -->
+  <input type="button" value="Submit" onclick="changeText()">
+  <p id="result"></p>
+</form>
+
+<script>
+    function changeText() {
+        var content = document.getElementById('content');
+        var background = document.getElementById('background');
+        var color = document.getElementById('color');
+        var result = document.getElementById('result');
+        console.log(content.value);
+        result.innerHTML += `${content.value}`;
+        result.style.backgroundColor = `#${background.value}`;
+        result.style.color =`#${color.value }`;
+    }
+  
+    </script>
+    
+</body>
+</html>

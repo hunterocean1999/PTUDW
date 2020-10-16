@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        #form1{
+            background-color:pink ;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+        input{
+            text-align: right;
+            outline: none;
+        }
+        h1{
+            color: #cc6600;
+            background-color: #FFEDCA;
+            text-transform: uppercase;
+        }
+    </style>
+<body>
+
+
+
+
+<form id="form1">
+    <h1>diện tích và chu vi hình tròn</h1>
+  <label>Bán kính:</label>
+  <input type="number" id="R" ><br><br>
+  <label >Diện tích:</label>
+  <input type="number" id="S"><br><br>
+  <label >Chu vi:</label>
+  <input type="number" id="C" name="fname"><br><br>
+  <!-- <p id="dientich"></p> -->
+  <input type="button" value="Submit" onclick="changeText()">
+  <p id="result"></p>
+</form>
+
+<script>
+    function changeText() {
+        var R = document.getElementById('R');
+        var S = document.getElementById('S');
+        var C = document.getElementById('C');
+
+       S.value = R.value * R.value * 3.14;
+       C.value = R.value * 3.14 *2;
+        
+    }
+  
+    </script>
+    
+</body>
+</html>
